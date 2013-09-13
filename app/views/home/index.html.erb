@@ -1,0 +1,46 @@
+<!--  This code also works
+<html>
+<head>
+<script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+</head>
+<body>
+<div style="padding-bottom:10px;">
+	<input type="text" name="address" value="" style="width:400px;border:1px solid black">
+	<input type="button" name="search" value="Geocode">
+</div>
+<div id="coords"></div>
+<div id="gmap" style="width:550px; height:550px;"></div>
+</body>
+</html>
+-->
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <title>Google Maps API </title>
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=AIzaSyBNBYdW87PoisxwIt6tFFJ_6-71rgl7CxQ"
+      type="text/javascript"></script>
+   <%= stylesheet_link_tag "main"%> 
+  </head>
+
+  <body onload="initialize()" onunload="GUnload()">
+    <form action="#" onsubmit="showAddress(this.address.value); return false">
+<div>     
+	 <p>
+        Enter an address, and then drag the marker to tweak the location.
+        <br/>
+        The latitude/longitude will appear in the infowindow after each geocode/drag.
+      </p>
+  </div>   
+      <div id="addr">  
+		  <input type="text" name="address" value="" id="addr" />
+	 	  <input type="submit" value="Find Location" />
+	  </div>
+	
+	  
+      <div id="map_canvas"></div>
+    </form>
+
+  </body>
+</html>
